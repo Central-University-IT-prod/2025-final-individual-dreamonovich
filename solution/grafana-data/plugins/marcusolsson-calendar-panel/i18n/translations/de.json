@@ -1,0 +1,218 @@
+{
+  "eventDetailsDrawer": {
+    "location": "Standort: {{location}}",
+    "title": "Veranstaltungsdetails"
+  },
+  "localizerMessages": {
+    "agenda": "Agenda",
+    "allDay": "Den ganzen Tag",
+    "date": "Datum",
+    "day": "Tag",
+    "event": "Ereignis",
+    "month": "Monat",
+    "next": "Nächste",
+    "noEventsInRange": "In diesem Bereich gibt es keine Veranstaltungen.",
+    "previous": "Zurück",
+    "showMore": "+{{total}} mehr",
+    "time": "Zeit",
+    "today": "Heute",
+    "tomorrow": "Morgen",
+    "week": "Woche",
+    "workWeek": "Arbeitswoche",
+    "year": "Jahr",
+    "yesterday": "Gestern"
+  },
+  "panel": {
+    "noViewsMessage": "Bitte aktivieren Sie mindestens eine Ansicht.",
+    "noViewsTitle": "Keine Ansichten"
+  },
+  "panelOptions": {
+    "annotations": {
+      "annotations": {
+        "description": "Anmerkungen anzeigen.",
+        "label": "Anmerkungen",
+        "options": {
+          "disabled": "Deaktiviert",
+          "enabled": "Ermöglicht"
+        }
+      },
+      "annotationsLimit": {
+        "label": "Maximales Limit"
+      },
+      "annotationsType": {
+        "label": "Typ",
+        "options": {
+          "alert": "Warnungen",
+          "all": "Beliebig",
+          "annotation": "Anmerkungen"
+        }
+      },
+      "label": "Anmerkungen"
+    },
+    "data": {
+      "colorField": {
+        "description": "Feld, das als Ereignisfarbe verwendet werden soll.",
+        "label": "Farbe"
+      },
+      "descriptionField": {
+        "description": "Feld zur Verwendung für die Ereignisbeschreibung.",
+        "label": "Beschreibung",
+        "noFieldsMessage": "Keine Zeichenfolgenfelder gefunden"
+      },
+      "endTimeField": {
+        "description": "Feld, das für die Endzeit des Ereignisses verwendet werden soll. Wenn nicht festgelegt, erfolgt das Ereignis sofort.",
+        "label": "Endzeit"
+      },
+      "label": "Daten",
+      "labelFields": {
+        "description": "Felder, die als Ereignisbezeichnungen verwendet werden sollen.",
+        "label": "Etiketten"
+      },
+      "locationField": {
+        "description": "Feld, das für den Veranstaltungsort verwendet werden soll.",
+        "label": "Standort",
+        "noFieldsMessage": "Keine Zeichenfolgenfelder gefunden"
+      },
+      "textField": {
+        "description": "Feld, das für den Ereignistext verwendet werden soll. Standardmäßig wird das erste Textfeld verwendet.",
+        "label": "Text",
+        "noFieldsMessage": "Keine Zeichenfolgenfelder gefunden"
+      },
+      "timeField": {
+        "description": "Feld, das für die Startzeit des Ereignisses verwendet werden soll. Standardmäßig wird das erste Zeitfeld verwendet.",
+        "label": "Startzeit"
+      }
+    },
+    "endTimeRange": {
+      "description": "Endzeit einstellen",
+      "label": "Endzeitbereich (bis)"
+    },
+    "endTimeVariable": {
+      "description": "Variable auswählen",
+      "label": "Endzeitbereich (bis)"
+    },
+    "eventField": {
+      "options": {
+        "description": "Beschreibung",
+        "labels": "Etiketten",
+        "links": "Links",
+        "location": "Standort",
+        "text": "Text",
+        "time": "Zeit"
+      }
+    },
+    "events": {
+      "displayFields": {
+        "description": "Felder, die in den Ereignisdetails angezeigt werden sollen.",
+        "label": "Detailinformationen"
+      },
+      "label": "Veranstaltungen",
+      "locationLabel": {
+        "description": "Geben Sie eine benutzerdefinierte Beschriftung für das Standortfeld an.",
+        "label": "Location label",
+        "placeholder": "Standort:"
+      },
+      "preformattedDescription": {
+        "description": "Ermöglicht die Anzeige von vorformatiertem Text in der Beschreibung.",
+        "label": "Beschreibungsformat"
+      },
+      "preformattedOptions": {
+        "options": {
+          "default": "Inline",
+          "preformatted": "Vorformatierter Text"
+        }
+      },
+      "quickLinks": {
+        "description": "Öffnen Sie den Datenlink oder zeigen Sie die Schublade an, wenn Sie auf ein Ereignis klicken.",
+        "label": "Auf Klick",
+        "options": {
+          "disabled": "Zeige Details",
+          "enabled": "Verbindung öffnen"
+        }
+      },
+      "showEventTooltip": {
+        "label": "Tooltip",
+        "description": "Ereignisdetails beim Hovern anzeigen",
+        "options": {
+          "disabled": "Deaktiviert",
+          "enabled": "Ermöglicht"
+        }
+      }
+    },
+    "layout": {
+      "colors": {
+        "description": "Zeigt Farben basierend auf der Frame- oder Ereignis-ID an, wenn das Feld „Farbe“ nicht angegeben ist.",
+        "label": "Farben",
+        "options": {
+          "event": "Ereignis",
+          "frame": "Rahmen",
+          "thresholds": "Schwellenwerte"
+        }
+      },
+      "dateFormat": {
+        "label": "Datums- und Uhrzeitformat",
+        "options": {
+          "de": "Deutsch",
+          "en": "Englisch",
+          "en24": "Englisch 24H",
+          "es": "Spanisch",
+          "fr": "Französisch",
+          "inherit": "Benutzerauswahl",
+          "iso": "ISO 8601",
+          "pt": "Portugese",
+          "zh": "Chinesisch"
+        }
+      },
+      "defaultView": {
+        "label": "Standardansicht"
+      },
+      "label": "Layout",
+      "views": {
+        "label": "Ansichten",
+        "options": {
+          "agenda": "Agenda",
+          "day": "Tag",
+          "month": "Monat",
+          "week": "Woche",
+          "workWeek": "Arbeitswoche",
+          "year": "Jahr"
+        }
+      },
+      "textSize": {
+        "label": "Textgröße",
+        "description": "Einstellung der Textgröße in px."
+      },
+      "showTime": {
+        "options": {
+          "disabled": "Deaktiviert",
+          "enabled": "Ermöglicht"
+        },
+        "month": {
+          "label": "Monatszeit",
+          "description": "Ereigniszeit in der Monatsansicht anzeigen"
+        }
+      }
+    },
+    "scrollToTime": {
+      "description": "Stellen Sie den anfänglichen Bildlauf auf die ausgewählte Zeit ein.",
+      "label": "Scrollen Sie zu „Zeit“."
+    },
+    "startTimeRange": {
+      "description": "Startzeit einstellen",
+      "label": "Startzeitbereich (von)"
+    },
+    "startTimeVariable": {
+      "description": "Variable auswählen",
+      "label": "Startzeitbereich (von)"
+    },
+    "timeRangeType": {
+      "description": "Einstellen der Art des Zeitbereichs",
+      "label": "Zeitbereichstyp",
+      "options": {
+        "default": "Armaturenbrett",
+        "manual": "Handbuch",
+        "variable": "Variable"
+      }
+    }
+  }
+}

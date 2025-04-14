@@ -1,0 +1,18 @@
+[project]
+name = "advertising-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiogram>=3.17.0",
+    "aiogram-dialog>=2.3.1",
+    "asyncpg>=0.30.0",
+    "redis>=5.2.1",
+    "tortoise-orm>=0.24.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.6",
+]

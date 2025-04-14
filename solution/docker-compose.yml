@@ -1,0 +1,152 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    container_name: advertising_db
+    ports: ["5435:5432"]
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "advertising"
+    command: ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+    volumes:
+      - ./postgresql/postgresql.conf:/etc/postgresql/postgresql.conf
+      - postgres-data:/var/lib/postgresql/data/
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build: ./api
+    container_name: advertising_web
+    ports:
+      - "8080:8000"
+    environment:
+      SERVER_ADDRESS: "REDACTED:8000"
+      POSTGRES_USERNAME: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_HOST: "db"
+      POSTGRES_PORT: "5432"
+      POSTGRES_DATABASE: "advertising"
+      REDIS_HOST: "redis"
+      REDIS_PORT: "6379"
+      MINIO_S3_ENDPOINT: REDACTED
+      MINIO_STORAGE_URL: http://REDACTED
+      MINIO_STORAGE_URL2: http://REDACTED/api
+      MINIO_ROOT_USER: ads_service
+      MINIO_ROOT_PASSWORD: ads_service_pass
+      MINIO_ACCESS_KEY: ads_service_key
+      MINIO_SECRET_KEY: ads_service_secret_key
+      MINIO_BUCKET_NAME: ads-service
+      GRAFANA_API_URL: "http://grafana:3000"
+      GRAFANA_API_KEY: "REDACTED"
+      GRAFANA_ADVERTISER_DEFAULT_PASSWORD: "password"
+      YANDEX_API_TOKEN: "REDACTED"
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - .venv/
+
+        - action: rebuild
+          path: ./uv.lock
+    volumes:
+      - ./api:/app/api
+    healthcheck:
+      test: ["CMD", "/app/.venv/bin/python", "-c", "import requests; exit(0) if requests.get('http://localhost:8000/ping').status_code == 200 else exit(1)"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      db:
+        condition: service_healthy
+      grafana:
+        condition: service_started
+
+
+  redis:
+    image: redis:latest
+    container_name: promo_redis
+    restart: unless-stopped
+    ports:
+      - "6380:6379"
+    command: redis-server --save "" --appendonly no
+    volumes:
+      - redis-data:/data
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - prometheus-data:/prometheus
+      - ./prometheus-data/prometheus.yml:/etc/prometheus/prometheus.yml
+
+  postgres-exporter:
+    image: wrouesnel/postgres_exporter:v0.8.0
+    restart: always
+    environment:
+      #- DATA_SOURCE_NAME=REDACTED/postgres?sslmode=disable
+      - DATA_SOURCE_URI=db:5432/advertising?sslmode=disable
+      - DATA_SOURCE_USER=postgres
+      - DATA_SOURCE_PASS=postgres
+    ports:
+      - "9187:9187"
+    depends_on:
+      - db
+
+  tgbot:
+    build: ./tgbot
+    container_name: tgbot
+    environment:
+      MINIO_STORAGE_MEDIA_URL: "REDACTED"
+      REDIS_HOST: "redis"
+      REDIS_PORT: "6379"
+      REDIS_DB: "1"
+      BOT_TOKEN: "REDACTED"
+      API_URL: "http://web:8000"
+      DB_URL: "REDACTED/advertising"
+    depends_on:
+      web:
+        condition: service_healthy
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana-oss:latest
+    ports:
+      - "3000:3000"
+    user: ":"
+    volumes:
+      - ./grafana-data:/var/lib/grafana
+
+  #  minio:
+  #    image: minio/minio
+  #    command: server /data --console-address ":9001"
+  #    ports:
+  #      - "9011:9000"
+  #      - "9012:9001"
+  #    volumes:
+  #      - minio-data:/data
+  #    environment:
+  #      MINIO_ROOT_USER: ads_service
+  #      MINIO_ROOT_PASSWORD: ads_service_pass
+  #      MINIO_ACCESS_KEY: ads_service_key
+  #      MINIO_SECRET_KEY: ads_service_secret_key
+  #    restart: always
+
+volumes:
+  postgres-data:
+  redis-data:
+  minio-data:
+  grafana-data:
+  dashboards-volume:
+  prometheus-data:

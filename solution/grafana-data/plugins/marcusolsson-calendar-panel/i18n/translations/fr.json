@@ -1,0 +1,218 @@
+{
+  "eventDetailsDrawer": {
+    "location": "Emplacement: {{emplacement}}",
+    "title": "Détails de l'évènement"
+  },
+  "localizerMessages": {
+    "agenda": "Ordre du jour",
+    "allDay": "Toute la journée",
+    "date": "Date",
+    "day": "Jour",
+    "event": "Événement",
+    "month": "Mois",
+    "next": "Suivant",
+    "noEventsInRange": "Il n'y a aucun événement dans cette plage.",
+    "previous": "Dos",
+    "showMore": "+{{total}} plus",
+    "time": "Temps",
+    "today": "Aujourd'hui",
+    "tomorrow": "Demain",
+    "week": "Semaine",
+    "workWeek": "Semaine de travail",
+    "year": "Année",
+    "yesterday": "Hier"
+  },
+  "panel": {
+    "noViewsMessage": "Veuillez activer au moins une vue.",
+    "noViewsTitle": "Aucune vue"
+  },
+  "panelOptions": {
+    "annotations": {
+      "annotations": {
+        "description": "Afficher les annotations.",
+        "label": "Annotations",
+        "options": {
+          "disabled": "Désactivé",
+          "enabled": "Activé"
+        }
+      },
+      "annotationsLimit": {
+        "label": "Limite maximale"
+      },
+      "annotationsType": {
+        "label": "Taper",
+        "options": {
+          "alert": "Alertes",
+          "all": "N'importe lequel",
+          "annotation": "Annotations"
+        }
+      },
+      "label": "Annotations"
+    },
+    "data": {
+      "colorField": {
+        "description": "Champ à utiliser comme couleur d'événement.",
+        "label": "Couleur"
+      },
+      "descriptionField": {
+        "description": "Champ à utiliser pour la description de l'événement.",
+        "label": "Description",
+        "noFieldsMessage": "Aucun champ de chaîne trouvé"
+      },
+      "endTimeField": {
+        "description": "Champ à utiliser pour l'heure de fin de l'événement. S'il n'est pas défini, l'événement est instantané.",
+        "label": "Heure de fin"
+      },
+      "label": "Données",
+      "labelFields": {
+        "description": "Champs à utiliser comme étiquettes d'événement.",
+        "label": "Étiquettes"
+      },
+      "locationField": {
+        "description": "Champ à utiliser pour le lieu de l'événement.",
+        "label": "Emplacement",
+        "noFieldsMessage": "Aucun champ de chaîne trouvé"
+      },
+      "textField": {
+        "description": "Champ à utiliser pour le texte de l'événement. La valeur par défaut est le premier champ de texte.",
+        "label": "Texte",
+        "noFieldsMessage": "Aucun champ de chaîne trouvé"
+      },
+      "timeField": {
+        "description": "Champ à utiliser pour l'heure de début de l'événement. La valeur par défaut est le premier champ de temps.",
+        "label": "Heure de début"
+      }
+    },
+    "endTimeRange": {
+      "description": "Définir l'heure de fin",
+      "label": "Plage horaire de fin (à)"
+    },
+    "endTimeVariable": {
+      "description": "Sélectionner une variable",
+      "label": "Plage horaire de fin (à)"
+    },
+    "eventField": {
+      "options": {
+        "description": "Description",
+        "labels": "Étiquettes",
+        "links": "Liens",
+        "location": "Emplacement",
+        "text": "Texte",
+        "time": "Temps"
+      }
+    },
+    "events": {
+      "displayFields": {
+        "description": "Champs à afficher dans les détails de l'événement.",
+        "label": "Informations détaillées"
+      },
+      "label": "Événements",
+      "locationLabel": {
+        "description": "Spécifiez une étiquette personnalisée pour le champ d'emplacement.",
+        "label": "Étiquette d'emplacement",
+        "placeholder": "Emplacement:"
+      },
+      "preformattedDescription": {
+        "description": "Permet d'afficher du texte préformaté dans la description.",
+        "label": "Format descriptif"
+      },
+      "preformattedOptions": {
+        "options": {
+          "default": "En ligne",
+          "preformatted": "Préformaté"
+        }
+      },
+      "quickLinks": {
+        "description": "Ouvrez le lien de données ou affichez le tiroir lorsque vous cliquez sur un événement.",
+        "label": "Sur clic",
+        "options": {
+          "disabled": "Afficher les détails",
+          "enabled": "Ouvrir le lien"
+        }
+      },
+      "showEventTooltip": {
+        "label": "Info-bulle",
+        "description": "Afficher les détails de l'événement au survol",
+        "options": {
+          "disabled": "Désactivé",
+          "enabled": "Activé"
+        }
+      }
+    },
+    "layout": {
+      "colors": {
+        "description": "Afficher les couleurs en fonction de l'ID de l'image ou de l'événement si le champ Couleur n'est pas spécifié.",
+        "label": "Couleurs",
+        "options": {
+          "event": "Événement",
+          "frame": "Cadre",
+          "thresholds": "Seuils"
+        }
+      },
+      "dateFormat": {
+        "label": "Format de la date et de l'heure",
+        "options": {
+          "de": "Allemand",
+          "en": "Anglais",
+          "en24": "Anglais 24H",
+          "es": "Espagnol",
+          "fr": "Français",
+          "inherit": "Sélection de l'utilisateur",
+          "iso": "ISO 8601",
+          "pt": "Portugais",
+          "zh": "Chinois"
+        }
+      },
+      "defaultView": {
+        "label": "Vue par défaut"
+      },
+      "label": "Mise en page",
+      "views": {
+        "label": "Vues",
+        "options": {
+          "agenda": "Ordre du jour",
+          "day": "Jour",
+          "month": "Mois",
+          "week": "Semaine",
+          "workWeek": "Semaine de travail",
+          "year": "Année"
+        }
+      },
+      "textSize": {
+        "label": "Taille du texte",
+        "description": "Définit la taille du texte en px."
+      },
+      "showTime": {
+        "options": {
+          "disabled": "Désactivé",
+          "enabled": "Activé"
+        },
+        "month": {
+          "label": "Heure du mois",
+          "description": "Affichage de l'heure de l'événement dans la vue du mois"
+        }
+      }
+    },
+    "scrollToTime": {
+      "description": "Réglez le défilement initial sur l'heure sélectionnée.",
+      "label": "Faire défiler jusqu'à l'heure"
+    },
+    "startTimeRange": {
+      "description": "Définir l'heure de début",
+      "label": "Plage d'heures de début (à partir de)"
+    },
+    "startTimeVariable": {
+      "description": "Sélectionner une variable",
+      "label": "Plage d'heures de début (à partir de)"
+    },
+    "timeRangeType": {
+      "description": "Définir le type de plage horaire",
+      "label": "Type de plage horaire",
+      "options": {
+        "default": "Tableau de bord",
+        "manual": "Manuel",
+        "variable": "Variable"
+      }
+    }
+  }
+}

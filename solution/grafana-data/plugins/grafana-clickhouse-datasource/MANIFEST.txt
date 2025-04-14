@@ -1,0 +1,41 @@
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "grafana",
+  "signedByOrg": "grafana",
+  "signedByOrgName": "Grafana Labs",
+  "plugin": "grafana-clickhouse-datasource",
+  "version": "4.8.0",
+  "time": 1739373384580,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "CHANGELOG.md": "b8516b844e0dde928c1214a250a13c67eef745f4a14ba1c73064ff02aa884e2e",
+    "LICENSE": "cdd15e614b50e88443fe574ad56bde5ba697d958a45376431638eea816e3bfc3",
+    "README.md": "01c2a56425fa4fb836dcb30b7575b0ed031be483567704025e160497e5002e24",
+    "dashboards/cluster-analysis.json": "7f83d4d09cc6f045768f5bf47485b864dd6da03094f8607808dec77cb96902e5",
+    "dashboards/data-analysis.json": "71695f08dfad47f3d4da4c2d331a09eb8fe5789520d5566fffeecd626079caa1",
+    "dashboards/opentelemetry-clickhouse.json": "1a710a750988fdcd7d788e8aef001c1fb106e00253ea0208c2963d9a71d717e8",
+    "dashboards/query-analysis.json": "1b2006a3f4142e512e50156a7d2fd8cf03a178019aaccc964c0283c8559298b3",
+    "dashboards/system-dashboards.json": "a47eb47b9cd0bea82a7276fc805bba214164e677f68fb1e821b0278b17bee7f0",
+    "go_plugin_build_manifest": "e43fd2a1695732a0e68592e2a276bd4cb6f3b29e75b0dcda0f1563d6a65fd735",
+    "gpx_clickhouse_linux_amd64": "dd0ec9564f1b163cc204c3ed6fe5939ccc95fe8bb5f4a09586178345a11c4aad",
+    "img/logo.svg": "838199055d86584ff105e5e91013203a6acb7d3f2061ae27678786125ab11f09",
+    "module.js": "89b365749c2d456789cfe0e35974987bf589a0a0fcc1041511f79bd0103bdac6",
+    "module.js.map": "47c44e7a0b3daaabd8b03cc512d937956fff155f4862e11c756657fbb617a357",
+    "plugin.json": "365487863ffa911d69534a507c11b9645f29a45283a7ca18efbd4db323c99918"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+Version: OpenPGP.js v4.10.11
+Comment: https://openpgpjs.org
+
+wrkEARMKAAYFAmesu0gAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
+cIhm505iAgkA8YYpJS8KZK090RI9xe80uiz3zNpy/QV7YsBMVLLS03Z1pbqH
+T7S/dF1Vx8+SP44Rx70H+gZDiz8oEm/u+T2dP0ECCQBE2x4EGlPjVuFapLWQ
+GA1j1eZUqHxhgoiEIkI+QOmsQwrxHriJAX4RJtPwIM+5k+lJ9VhvBnQbAyVn
+l4/c3/QLXg==
+=ogRG
+-----END PGP SIGNATURE-----
